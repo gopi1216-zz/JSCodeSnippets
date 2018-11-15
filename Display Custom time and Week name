@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <p class="week"></p>
+  <p class="custom-time"></p>
+</body>
+<script>
+  var week = document.getElementsByClassName('week')[0],
+      customTime = document.getElementsByClassName('custom-time')[0],
+      date = new Date(),
+      days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      weekName = days[date.getDay()],
+      hour = date.getHours(),
+      minutes =date.getMinutes(),
+      seconds = date.getSeconds(),
+      prepand = (hour > 12)? "PM" : "AM",
+      hour = (hour >= 12)? hour - 12 : hour;
+
+  week.innerHTML = 'Today is : '+ weekName;
+  customTime.innerHTML = "Time is : "+ hour +" "+ prepand +" : "+ minutes + " : "+ seconds;
+</script>
+</html>
