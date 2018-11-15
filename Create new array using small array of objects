@@ -1,0 +1,11 @@
+var arra = [], fArr = [{a:1, b:2}], sArr = [{c:3, d:4}], tArr = [{e:5, f:6}];
+  arra = arra.concat(fArr, sArr, tArr);
+  var newArr = [], test;
+
+  for(var i = 0; i < arra.length; i++){
+    for(var j in arra[i]){
+      newArr.push({j:arra[i][j]});
+    }
+  }
+
+  console.log(newArr);
