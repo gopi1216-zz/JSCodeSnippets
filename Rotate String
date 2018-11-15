@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <p id="demo">Welcome to test</p>
+</body>
+<script>
+setInterval(function(){
+  var ele = document.getElementById('demo'),
+      text = ele.innerHTML,
+      str = text;
+  str = str[str.length - 1] + str.substring(0, str.length - 1);
+  ele.innerHTML = str;
+  return console.log(ele.innerHTML);
+}, 1000);
+
+</script>
+</html>
